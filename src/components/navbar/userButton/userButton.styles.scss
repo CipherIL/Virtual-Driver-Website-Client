@@ -1,0 +1,72 @@
+@use '../../../scss/variables.styles.scss' as *;
+
+.login-button {
+    display: flex;
+    align-items: center;
+    width: $navbar-max-width;
+    border-bottom: 4px solid $blue1;
+
+    .login-button__image-container {
+        width: 70px;
+        height: 70px;
+        margin: 20px;
+
+        border-radius: 50%;
+        background-color: $blue1;
+        flex-shrink: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .login-button__image {
+            filter: $blue5-filter;
+        }
+    }
+
+    .login-button__text {
+        color: $blue1;
+        font-size: 24px;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+.user-button {
+    display: flex;
+    align-items: center;
+    width: $navbar-max-width;
+    border-bottom: 4px solid $blue1;
+
+    .user-button__letters-container {
+        width: 70px;
+        height: 70px;
+        margin: 20px;
+
+        border-radius: 50%;
+        background-color: $blue1;
+        flex-shrink: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        font-size: 40px;
+        font-weight: bold;
+        color: $blue5
+    }
+
+    .user-button__text {
+
+        .user-button__text__email {
+            color: $blue1;
+            font-size: 18px;
+        }
+
+        .user-button__text__logout {
+            color: $soft-red;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+}

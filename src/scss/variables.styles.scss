@@ -1,0 +1,16 @@
+//Colors
+$blue1: #F3F7F6;
+$blue2: #BAD1CD;
+$blue3: #33658A;
+$blue4: #2F4858;
+$blue5: #243742;
+$soft-red: #E23636;
+
+$blue1-filter: invert(100%) sepia(14%) saturate(198%) hue-rotate(84deg) brightness(100%) contrast(94%);
+$blue2-filter: invert(86%) sepia(12%) saturate(256%) hue-rotate(120deg) brightness(93%) contrast(95%);
+$blue3-filter: invert(36%) sepia(41%) saturate(679%) hue-rotate(163deg) brightness(89%) contrast(88%);
+$blue4-filter: invert(25%) sepia(19%) saturate(981%) hue-rotate(160deg) brightness(92%) contrast(88%);
+$blue5-filter: invert(18%) sepia(13%) saturate(1230%) hue-rotate(158deg) brightness(99%) contrast(94%);
+
+//Sizes
+$navbar-max-width: 350px;
