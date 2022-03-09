@@ -1,0 +1,6 @@
+@use '../../scss/variables.styles.scss' as *;
+
+.main-content {
+    margin-left: $navbar-min-width;
+    height: 100vh;
+}

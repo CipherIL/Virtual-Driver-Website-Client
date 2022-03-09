@@ -1,0 +1,29 @@
+@use '../../../scss/variables.styles.scss' as *;
+
+.welcome-message {
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    flex-grow: 1;
+
+    h1 {
+        color: $blue1;
+        font-size: 50px;
+    }
+
+    p {
+        color: $blue1;
+        font-size: 25px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    img {
+        margin-top: 30px;
+        max-width: 500px;
+    }
+}

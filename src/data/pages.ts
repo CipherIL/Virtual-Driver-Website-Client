@@ -1,7 +1,7 @@
 export const pages = [
     {
         title: 'My Files',
-        link: 'my-file',
+        link: 'my-files',
         icon: 'folder'
     },
     {

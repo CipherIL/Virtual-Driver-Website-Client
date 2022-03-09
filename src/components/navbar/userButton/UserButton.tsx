@@ -6,7 +6,6 @@ import './userButton.styles.scss';
 
 const UserButton: React.FC = () => {
   const {user} = useContext(UserContext);
-  console.log(user)
 
   return (
     <>

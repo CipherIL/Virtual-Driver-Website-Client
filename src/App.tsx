@@ -1,11 +1,17 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
+//Layouts & Redirects
+import PageLayout from './components/containers/PageLayout';
+import HomepageRedirect from './components/redirects/HomepageRedirect';
+import UserRedirect from './components/redirects/UserRedirect';
+
 //Components
-import Navbar from './components/navbar/Navbar';
 import { UserProvider } from './contexts/user.context';
+import Login from './pages/login/Login.page';
+import MyFiles from './pages/myFiles/MyFiles.page';
 
 //Styles
 import './app.styles.scss';
@@ -16,9 +22,13 @@ function App() {
   return (
     <BrowserRouter>
     <UserProvider>
-      <div className="app">
-        <Navbar/>
-      </div>
+      <Routes>
+        <Route path="/" element={<PageLayout/>}>
+          <Route index element={<HomepageRedirect/>}/>
+          <Route path="login" element={<Login/>}/>
+          <Route path="my-files" element={<UserRedirect><MyFiles/></UserRedirect>}/>
+        </Route>
+      </Routes>
     </UserProvider>
     </BrowserRouter>
   );

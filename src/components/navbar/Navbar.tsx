@@ -8,9 +8,13 @@ const Navbar: React.FC = () => {
     return (
         <nav className='navbar'>
             <UserButton/>
-            {pages.map((page)=>{
+            {pages.map((page,i)=>{
                 return (
-                    <PageButton pageLink={page.link} pageTitle={page.title} pageIcon={page.icon}/>
+                    <PageButton 
+                        pageLink={page.link} 
+                        pageTitle={page.title} 
+                        pageIcon={page.icon}
+                        key={i}/>
                 )
             })}
             

@@ -1,0 +1,23 @@
+@use '../../../scss/variables.styles.scss' as *;
+.custom-button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+
+    background-color: $blue2;
+    cursor: pointer;
+    align-self: center;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: $blue5;
+
+    transition: all 100ms linear;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    &:hover {
+        color: $blue1;
+        background-color: $blue5;
+    }
+}
