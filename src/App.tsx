@@ -16,6 +16,7 @@ import MyFiles from './pages/myFiles/MyFiles.page';
 //Styles
 import './app.styles.scss';
 import LoginRedirect from './components/redirects/LoginRedirect';
+import SharedFiles from './pages/sharedFiles/SharedFiles.page';
 
 library.add(fas);
 
@@ -28,6 +29,7 @@ function App() {
           <Route index element={<HomepageRedirect/>}/>
           <Route path="login" element={<LoginRedirect><Login/></LoginRedirect>}/>
           <Route path="my-files" element={<UserRedirect><MyFiles/></UserRedirect>}/>
+          <Route path="shared-files" element={<UserRedirect><SharedFiles/></UserRedirect>}/>
         </Route>
       </Routes>
     </UserProvider>

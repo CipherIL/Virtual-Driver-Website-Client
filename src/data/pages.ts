@@ -5,8 +5,8 @@ export const pages = [
         icon: 'folder'
     },
     {
-        title: 'Upload File',
-        link: 'upload-file',
-        icon: 'file'
+        title: 'Shared Files',
+        link: 'shared-files',
+        icon: 'share-nodes'
     },
 ]
