@@ -1,22 +1,22 @@
 import React, { createContext, useState } from "react";
 
-interface User {
+export interface IUser {
     firstName: string,
     lastName: string,
     email: string,
 }
 
 interface IUserContext {
-    user?: User;
-    setUser?: React.Dispatch<React.SetStateAction<User>> | React.Dispatch<React.SetStateAction<undefined>>;
+    user?: IUser;
+    setUser?: React.Dispatch<React.SetStateAction<IUser | undefined>>;
 }
 
 const defaultState = {firstName:"Itay",lastName:"Leybovich",email:"Itayleybovich@gmail.com"}
 
-export const UserContext = createContext<IUserContext> ({});
+export const UserContext = createContext<IUserContext>({});
 
 export const UserProvider: React.FC = ({children}) => {
-    const [user,setUser] = useState();
+    const [user,setUser] = useState<IUser | undefined>();
     return (
         <UserContext.Provider value={{user,setUser}}>
             {children}

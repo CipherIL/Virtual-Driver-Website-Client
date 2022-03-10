@@ -52,4 +52,12 @@
         font-weight: bold;
         cursor: pointer;
     }
+
+    &.disabled {
+        background-color: #ddd;
+        .login-form__switch-button {
+            cursor: not-allowed;
+            color: #ccc;
+        }
+    }
 }

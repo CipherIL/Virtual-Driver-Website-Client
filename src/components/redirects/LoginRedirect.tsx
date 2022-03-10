@@ -1,11 +1,11 @@
 import Cookies from 'js-cookie';
 import React, { useContext, useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom';
-import { UserContext } from '../../contexts/user.context'
+import { UserContext } from '../../contexts/user.context';
 import { tokenRelogin } from '../../server/user.requests';
 import Loader from '../shared/loader/Loader';
 
-const UserRedirect :React.FC = ({children}) => {
+const LoginRedirect: React.FC = ({children}) => {
     const {user,setUser} = useContext(UserContext);
     const [loading,setLoading] = useState(true);
 
@@ -16,7 +16,7 @@ const UserRedirect :React.FC = ({children}) => {
             tokenRelogin()
             .then((data)=>{
                 if(data) {
-                  setUser && setUser(data.data);
+                setUser && setUser(data.data);
                 }
             })
             .catch((err)=>{
@@ -26,8 +26,8 @@ const UserRedirect :React.FC = ({children}) => {
     },[])
 
     if(loading && !user) return <Loader/>
-    if(!user) return <Navigate to="/login"/>
+    if(user) return <Navigate to="/"/>
     else return <>{children}</>;
 }
 
-export default UserRedirect
+export default LoginRedirect

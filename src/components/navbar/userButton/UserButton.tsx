@@ -2,11 +2,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../contexts/user.context';
+import { userLogout } from '../../../server/user.requests';
 import './userButton.styles.scss';
 
 const UserButton: React.FC = () => {
-  const {user} = useContext(UserContext);
-
+  const {user,setUser} = useContext(UserContext);
+  const handleUserLogout = async () => {
+    if(await userLogout()) {
+      setUser && setUser(undefined);
+    } else {
+      alert("Could not logout!");
+    }
+  }
   return (
     <>
       {!user && 
@@ -24,7 +31,7 @@ const UserButton: React.FC = () => {
           </div>
           <div className='user-button__text'>
             <div className='user-button__text__email'>{user.email}</div>
-            <div className='user-button__text__logout'>Logout</div>  
+            <div className='user-button__text__logout' onClick={handleUserLogout}>Logout</div>  
           </div>
         </div>
       }

@@ -15,6 +15,7 @@ import MyFiles from './pages/myFiles/MyFiles.page';
 
 //Styles
 import './app.styles.scss';
+import LoginRedirect from './components/redirects/LoginRedirect';
 
 library.add(fas);
 
@@ -25,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PageLayout/>}>
           <Route index element={<HomepageRedirect/>}/>
-          <Route path="login" element={<Login/>}/>
+          <Route path="login" element={<LoginRedirect><Login/></LoginRedirect>}/>
           <Route path="my-files" element={<UserRedirect><MyFiles/></UserRedirect>}/>
         </Route>
       </Routes>
