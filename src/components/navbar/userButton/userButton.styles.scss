@@ -36,7 +36,9 @@
     display: flex;
     align-items: center;
     width: $navbar-max-width;
-    border-bottom: 4px solid $blue1;
+    border: 4px solid $blue1;
+    border-left: none;
+    border-radius: 0 30px 30px 0;
 
     .user-button__letters-container {
         width: 70px;
@@ -57,6 +59,10 @@
     }
 
     .user-button__text {
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
 
         .user-button__text__email {
             color: $blue1;

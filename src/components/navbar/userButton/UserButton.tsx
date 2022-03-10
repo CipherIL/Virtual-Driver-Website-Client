@@ -8,6 +8,7 @@ import './userButton.styles.scss';
 const UserButton: React.FC = () => {
   const {user,setUser} = useContext(UserContext);
   const handleUserLogout = async () => {
+    //FIXME: does not redirect to login page
     if(await userLogout()) {
       setUser && setUser(undefined);
     } else {

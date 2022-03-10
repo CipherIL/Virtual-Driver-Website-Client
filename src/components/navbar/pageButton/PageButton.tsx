@@ -13,12 +13,15 @@ interface Props {
 
 const PageButton: React.FC<Props> = ({pageTitle,pageLink,pageIcon}) => {
   return (
-    <Link to={pageLink} className='page-button'>
-      <div className='page-button__image-container'>
+    <div className='page-button'>
+      <Link to={pageLink} className='page-button__image-container'>
         <FontAwesomeIcon icon={pageIcon} size="2x" className='page-button__image'/>
+      </Link>
+      <div className='page-button__title-container'>
+        <div className='page-button__title'>{pageTitle}</div>
+        <div className='page-button__title-arrow'></div>
       </div>
-      <div className='page-button__title'>{pageTitle}</div>
-    </Link>
+    </div>
   )
 }
 

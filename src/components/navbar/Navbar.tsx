@@ -7,17 +7,20 @@ import { pages } from '../../data/pages';
 const Navbar: React.FC = () => {
     return (
         <nav className='navbar'>
-            <UserButton/>
-            {pages.map((page,i)=>{
-                return (
-                    <PageButton 
-                        pageLink={page.link} 
-                        pageTitle={page.title} 
-                        pageIcon={page.icon}
-                        key={i}/>
-                )
-            })}
-            
+            <div className='navbar__user-button'>
+                <UserButton/>
+            </div>
+            <div className='navbar__pages'>
+                {pages.map((page,i)=>{
+                    return (
+                        <PageButton 
+                            pageLink={page.link} 
+                            pageTitle={page.title} 
+                            pageIcon={page.icon}
+                            key={i}/>
+                    )
+                })}
+            </div>            
         </nav>
     )
 }
